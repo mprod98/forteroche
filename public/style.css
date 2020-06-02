@@ -1,0 +1,21 @@
+.bouton_retour, #non_connecte, #message_erreur
+{
+    margin-top: 25px;
+}
+
+.red
+{
+    color: #c9302c;
+    font-weight: bold;
+}
+
+footer
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+a:hover
+{
+	text-decoration:none;
+}
