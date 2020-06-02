@@ -62,7 +62,7 @@
       		</div>
    		</nav>
 
-        <?= $content ?>
+    
 
         <footer class="container">
         	<p></p>
