@@ -11,7 +11,12 @@
         <link href="vendor/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
         <link href="vendor/bootstrap/docs/examples/starter-template/starter-template.css" rel="stylesheet" />
         <link href="public/css/style.css" rel="stylesheet" /> 
-
+        <script src="https://cdn.tiny.cloud/1/1pv2lqdfkxh1486m4igelxh2rhukq8cabs9ee16rhqub5wkc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+		tinymce.init({
+			selector: '#chapterContent'
+		});
+		</script>
 
     </head>
         
