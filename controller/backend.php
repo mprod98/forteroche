@@ -20,7 +20,7 @@ function login()
             $_SESSION = array();
             session_destroy();
 
-            $_SESSION['message'] = 'Mot de passe ou identifiant erroné ! Contactez un admin ou Retaper votre MDP';
+            $_SESSION['message'] = 'Mot de passe ou identifiant erroné ! Contactez un admin ou Retapez votre MDP';
 
         }
         else {
