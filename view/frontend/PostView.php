@@ -6,7 +6,7 @@
 
     <p class="bouton_retour">
         <a href="index.php">
-            <button class="btn btn-default">Chpaitre: Retour à la liste </button>
+            <button class="btn btn-default">Chapitre: Retour à la liste </button>
         </a>
     </p>
     
