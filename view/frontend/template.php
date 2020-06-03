@@ -6,17 +6,16 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1" />
     	<meta name="description" content="Jean Forteroche, acteur et écrivain. Il travaille actuellement sur son prochain roman, 'Billet simple pour l'Alaska'. Il souhaite innover et le publier par épisode en ligne sur son propre site.">
     	<meta name="author" content="Site web fait en PHP et MySQL par Michel Merra. Avec une architecture MVC et POO. Projet 4 : 'Créez le blog d'un écrivain', formation Openclassrooms 'Développeur Web Junior'">
+    	
+
         <title><?= $title ?></title>
+
         <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="vendor/bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
         <link href="vendor/bootstrap/docs/examples/starter-template/starter-template.css" rel="stylesheet" />
         <link href="public/css/style.css" rel="stylesheet" /> 
-        <script src="https://cdn.tiny.cloud/1/1pv2lqdfkxh1486m4igelxh2rhukq8cabs9ee16rhqub5wkc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>
-		tinymce.init({
-			selector: '#chapterContent'
-		});
-		</script>
+
+	
 
     </head>
         
@@ -67,12 +66,16 @@
       		</div>
    		</nav>
 
-    
+        <?= $content ?>
 
         <footer class="container">
         	<p></p>
         </footer>
 
-	   
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script>window.jQuery || document.write('<script src="vendor/bootstrap/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+	    <script src="vendor/bootstrap/docs/dist/js/bootstrap.min.js"></script>
+	    <script src="vendor/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
     </body>
 </html>

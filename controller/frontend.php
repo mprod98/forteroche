@@ -10,7 +10,7 @@ function listPosts()
     $postManager = new PostManager(); // Création objet
     $posts = $postManager->getPosts(); // call fonction de l'objet 
 
-    require('view/frontend/listPostsView.php');
+    require('view/frontend/ListPostsView.php');
 }
 
 function post($postId)
@@ -22,7 +22,7 @@ function post($postId)
     $comments = $commentManager->getComments($postId);
     $reporting = $commentManager->getReporting($postId);
 
-    require('view/frontend/postView.php');
+    require('view/frontend/PostView.php');
 }
 
 function addComment($postId, $author, $comment)
@@ -51,10 +51,10 @@ function report($commentId, $postId)
     }
 }
 
-/*function error($e)
+function error($e)
 {
-    require('view/frontend/errorView.php');
-}*/
+    require('view/frontend/ErrorView.php');
+}
 
 function checkPost($postId)
 {

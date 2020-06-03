@@ -33,7 +33,7 @@ function login()
             else {
                 $_SESSION = array();
                 session_destroy();
-                $_SESSION['message'] = 'Mot de passe ou identifiant erroné ! Contactez un admin ou Retaper votre MDP';
+                $_SESSION['message'] = 'Mot de passe ou identifiant erroné ! Contactez un admin ou Retapez votre MDP';
             }
         }
     }
@@ -84,7 +84,7 @@ function adminCancelReport($reportId)
 
 function adminNewPost() 
 {
-    require('view/backend/adminNewPost.php');
+    require('view/backend/AdminNewPost.php');
 }
 
 function adminAddPost() 
@@ -130,7 +130,7 @@ function adminChangingPost($postId)
         throw new Exception('Impossible de modifier ce chapitre !');
     }
     else {
-       header('Location: index.php?action=adminAllPosts');
+       header('Location: index.php?action=AdminAllPosts');
     }    
 }
 
