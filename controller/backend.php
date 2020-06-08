@@ -118,7 +118,7 @@ function adminChangePost($postId)
     $comments = $commentManager->getComments($postId);
     $reporting = $commentManager->getReporting($postId);
 
-    require('view/backend/AdminChangePost.php');
+    require('view/backend/AdminChangePosts.php');
 }
 
 function adminChangingPost($postId) 

@@ -115,16 +115,16 @@ try {
                 throw new Exception('Aucun identifiant de chapitre envoyé');
             }
         }
-        elseif ($_GET['action'] == 'adminNewPost') {
+        elseif ($_GET['action'] == 'AdminNewPost') {
             adminNewPost();
         }
         elseif ($_GET['action'] == 'adminAddPost') {
             adminAddPost();
         }
-        elseif ($_GET['action'] == 'adminAllPosts') {
+        elseif ($_GET['action'] == 'AdminAllPosts') {
             adminAllPosts();
         }
-        elseif ($_GET['action'] == 'adminChangePost') {
+        elseif ($_GET['action'] == 'AdminChangePosts') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $exist = checkPost($_GET['id']);

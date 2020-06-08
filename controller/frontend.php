@@ -4,7 +4,7 @@
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/AdminManager.php');
-/*
+
 function listPosts()
 {
     $postManager = new PostManager(); // Création objet
@@ -81,4 +81,4 @@ function checkReport($reportId)// verifie les signalements
     $check = $commentManager->getCheckReport($reportId);
 
     return $check;
-}*/
+}
