@@ -51,7 +51,7 @@ class AdminManager extends Manager
     public function setNewPost()
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('INSERT INTO posts(title, content, creation_date) VALUES (?, ?, NOW())');
+        $req = $db->prepare('INSERT INTO posts(title, content, creation_date) VALUES (?, ?, ADDTIME(NOW(), "2:00"))');
         $affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent']));
 
         return $affectedLines;
@@ -60,7 +60,7 @@ class AdminManager extends Manager
     public function setChangePost($postId)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date=NOW()  WHERE `posts`.`id` = ?');
+        $req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date=ADDTIME(NOW(), "2:00")  WHERE `posts`.`id` = ?');
         $affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent'], $postId));
 
         return $affectedLines;

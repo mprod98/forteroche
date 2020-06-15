@@ -17,5 +17,9 @@ if (strcmp($script_tz, ini_get('date.timezone'))){
     echo 'Le décalage horaire du script est équivalent à celui défini dans le fichier ini.';
 }
 echo $script_tz;
+
+$db = $this->dbConnect();
+$req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date= ADDTIME (NOW(), "2:00")  WHERE `posts`.`id` = ?');
+$affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent'], $postId));
 ?>
 
