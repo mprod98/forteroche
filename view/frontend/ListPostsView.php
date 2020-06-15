@@ -2,20 +2,20 @@
 
 <?php ob_start(); ?>
 
-<div class="jumbotron">
-  	<div class="container">
-        <h1>Bonjour !</h1>
-        <p>Bienvenue sur le blog de Jean Forteroche !  Ecrivain et Romancier, je poste au fur et à mesure un nouveau chapitre de mon dernier roman intitulé "Billet simple pour l'Alaska". Laissez moi des commentaires pour faire évoluer l'histoire !</p>
+<div class="jumbotron jumbotron-fluid">
+  	<div class="container-fluid">
+        <h1 class="display-4">Bonjour !</h1>
+        <p class="lead">Bienvenue sur le blog de Jean Forteroche !  Ecrivain et Romancier, je poste au fur et à mesure un nouveau chapitre de mon dernier roman intitulé "Billet simple pour l'Alaska". Laissez moi des commentaires pour faire évoluer l'histoire !</p>
   	</div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 
 	<?php
 	while ($data = $posts->fetch())
 	{
 	?>
-	    <div class="panel panel-primary">
+	    <div class="panel panel-info">
 	  		<div class="panel-heading">
 	    		<h3 class="panel-title">
 	    			<?= htmlspecialchars($data['title']) ?>
@@ -28,7 +28,7 @@
 	  		</div>
 	  		<div class="panel-footer">
 	  			<a href="index.php?action=post&amp;id=<?= $data['id'] ?>">
-					<p class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-comment"></span></p>
+					<p class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-comment"></span></p>
 				</a>
 			</div>
 		</div>

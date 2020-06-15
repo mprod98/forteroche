@@ -60,7 +60,7 @@ class AdminManager extends Manager
     public function setChangePost($postId)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('UPDATE posts SET title = ?, content=? WHERE `posts`.`id` = ?');
+        $req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date=NOW()  WHERE `posts`.`id` = ?');
         $affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent'], $postId));
 
         return $affectedLines;
