@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 <p class="bouton_retour">
-    <a href="index.php?action=AdminAllPosts"">
+    <a href="index.php?action=AdminAllPosts">
         <button class="btn btn-default">Retour à tous les chapitres</button>
     </a>
 </p>

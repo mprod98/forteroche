@@ -17,9 +17,14 @@ if (strcmp($script_tz, ini_get('date.timezone'))){
     echo 'Le décalage horaire du script est équivalent à celui défini dans le fichier ini.';
 }
 echo $script_tz;
+$db = new PDO('mysql:host=localhost;dbname=forteroche;charset=utf8', 'root', '');
+echo timezone_offset_get('Asia/Taipei','Europe/Paris');
+$db->query ("SET GLOBAL time_zone='Europe/Paris'");
+foreach ($db->query ("select CONVERT_TZ(NOW(),'+00:00','+02:00')") as $key => $value) {
+   var_dump($value);
+};
 
-$db = $this->dbConnect();
-$req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date= ADDTIME (NOW(), "2:00")  WHERE `posts`.`id` = ?');
-$affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent'], $postId));
+/*$req = $db->prepare('UPDATE posts SET title = ?, content=?, creation_date= ADDTIME (NOW(), "2:00")  WHERE `posts`.`id` = ?');
+$affectedLines = $req->execute(array($_POST['title'], $_POST['chapterContent'], $postId));*/
 ?>
 
