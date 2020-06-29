@@ -67,16 +67,16 @@
       		</div>
    		</nav>
 
-   		<div class="container">
+   		<!--<div class="container">
 	    	<?php
-			if (!isset($_SESSION['login']))
-			{ ?>
-				<div class="alert alert-danger" id="non_connecte">
+			//if (!isset($_SESSION['login']))
+			//{ ?>
+				<!--<div class="alert alert-danger" id="non_connecte">
 					<p><strong>accés interdit. connexion obligatoire !</strong> Merci de vous connecter...</p>
-				</div>
+				</div>-->
 			<?php
-			}
-			else 
+			//}
+			//else 
 			{ 
 				echo $content;
 			} ?>

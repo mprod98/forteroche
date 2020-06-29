@@ -104,9 +104,10 @@ function adminAddPost()
 function adminAllPosts() 
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter";
+        $message="veuillez vous connecter 00";
         require('view/backend/ErrorView.php');
     return;
+    
 }
     $postManager = new PostManager(); // Création d'un objet
     $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
