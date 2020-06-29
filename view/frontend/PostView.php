@@ -67,7 +67,7 @@
                 if (isset($message_report) && $message_report == true) { 
                 ?>
                     </p>
-                    <p class="alert alert-danger"><strong>Ce commentaire a déjà été signalé !</strong> l'administrateur s'en coccupe au plus vite.</p>
+                    <p class="alert alert-danger"><strong>Ce commentaire a déjà été signalé !</strong> l'administrateur s'en occupe au plus vite.</p>
                 <?php
                 }
                 else { 
