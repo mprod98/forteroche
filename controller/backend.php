@@ -50,6 +50,12 @@ function logout()
 
 function adminIndex()
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 07";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $reporting = $adminManager->getReportingAdmin();
 
@@ -58,6 +64,12 @@ function adminIndex()
 
 function adminDeleteReport($commentId)
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 06";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $affectedLines = $adminManager->setDeleteReport($commentId);
 
@@ -71,6 +83,12 @@ function adminDeleteReport($commentId)
 
 function adminCancelReport($reportId)
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 05";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $affectedLines = $adminManager->setCancelReport($reportId);
 
@@ -89,6 +107,12 @@ function adminNewPost()
 
 function adminAddPost() 
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 04";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $affectedLines = $adminManager->setNewPost();
 
@@ -129,6 +153,12 @@ function adminChangePost($postId)
 
 function adminChangingPost($postId) 
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 02";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $affectedLines = $adminManager->setChangePost($postId);
 
@@ -142,6 +172,12 @@ function adminChangingPost($postId)
 
 function adminDeletePost($postId)
 {
+    if (!isset($_SESSION['login'])){
+        $message="veuillez vous connecter 03";
+        require('view/backend/ErrorView.php');
+    return;
+    
+}
     $adminManager = new AdminManager();
     $affectedLines = $adminManager->setDeletePost($postId);
 
