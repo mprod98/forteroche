@@ -65,7 +65,7 @@ function adminIndex()
 function adminDeleteReport($commentId)
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 06";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     
@@ -84,7 +84,7 @@ function adminDeleteReport($commentId)
 function adminCancelReport($reportId)
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 05";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     
@@ -108,7 +108,7 @@ function adminNewPost()
 function adminAddPost() 
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 04";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     
@@ -128,7 +128,7 @@ function adminAddPost()
 function adminAllPosts() 
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 00";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     
@@ -154,7 +154,7 @@ function adminChangePost($postId)
 function adminChangingPost($postId) 
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 02";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     
@@ -173,7 +173,7 @@ function adminChangingPost($postId)
 function adminDeletePost($postId)
 {
     if (!isset($_SESSION['login'])){
-        $message="veuillez vous connecter 03";
+        $message="veuillez vous connecter";
         require('view/backend/ErrorView.php');
     return;
     

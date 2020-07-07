@@ -11,7 +11,7 @@ L'admin doit pouvoir supprimer ou accepter les commentaires via sa console d'adm
 2. Récuperez le fichier Forteroche script init.sql et importez le dans la table de votre bdd que vous créerez pour l'occasion. Le script sql est opérationnel mais vierge ;-)
 
 ### Liste des fichiers et roles.
-Les fichiers se décomposent en Modeles Vues Controleur avec un Routeur pour diriger le tout. les fichiers sont rangés dans les dossiers correpondants.
+Les fichiers se décomposent en Modèles Vues Controleur avec un Routeur pour diriger le tout. les fichiers sont rangés dans les dossiers correpondants.
 * Routeur:
 Index.php
 * Model:

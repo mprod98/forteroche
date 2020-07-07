@@ -67,16 +67,9 @@
       		</div>
    		</nav>
 
-   		<!--<div class="container">
-	    	<?php
-			//if (!isset($_SESSION['login']))
-			//{ ?>
-				<!--<div class="alert alert-danger" id="non_connecte">
-					<p><strong>accés interdit. connexion obligatoire !</strong> Merci de vous connecter...</p>
-				</div>-->
+   		
 			<?php
-			//}
-			//else 
+			
 			{ 
 				echo $content;
 			} ?>
