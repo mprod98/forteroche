@@ -21,18 +21,18 @@ Index.php
 ⋅⋅4. PostManager.php
 3. View (contient deux dossiers, le premier pour le Frontend, le second pour le Backend):
 ⋅⋅* Backend:
-⋅⋅1. AdminAllPosts.php
-⋅⋅2. AdminchangesPosts.php
-⋅⋅3. AdminIndex.php
-⋅⋅4. AdminNewPost.php
-⋅⋅5. ErrorView.php
-⋅⋅6. template.php
-⋅⋅* Frontend:
-⋅⋅1. Errorview.php
-⋅⋅2. ListPostView.php
-⋅⋅3. PostView.php
-⋅⋅4.template.php 
+  1. AdminAllPosts.php
+  2. AdminchangesPosts.php
+  3. AdminIndex.php
+  4. AdminNewPost.php
+  5. ErrorView.php
+  6. template.php
+  * Frontend:
+  1. Errorview.php
+  2. ListPostView.php
+  3. PostView.php
+  4. template.php 
 4. Controller:
-⋅⋅1. backend.php
-⋅⋅2. frontend.php
+  1. backend.php
+  2. frontend.php
 **Attention toutefois. Le dépot contient aussi un fichier 'vendor/bootsrap' qui n'est là qu'à titre de comprehension pour mon projet. Il vous suffit de placer les liens CDN Bootstrap dans le projet afin de supprimer ce dossier si vous ne souhaitez pas l'héberger sur votre serveur de projet**
