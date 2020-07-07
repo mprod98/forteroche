@@ -12,14 +12,14 @@ L'admin doit pouvoir supprimer ou accepter les commentaires via sa console d'adm
 
 ### Liste des fichiers et roles.
 Les fichiers se décomposent en Modeles Vues Controleur avec un Routeur pour diriger le tout. les fichiers sont rangés dans les dossiers correpondants.
-1. Routeur:
+* Routeur:
 Index.php
-2. Model:
+* Model:
   1. AdminManager.php
   2. CommentManager.php
   3. Manager.php  *contient la function protégée dbConnect*
   4. PostManager.php
-3. View (contient deux dossiers, le premier pour le Frontend, le second pour le Backend):
+* View (contient deux dossiers, le premier pour le Frontend, le second pour le Backend):
   * Backend:
   1. AdminAllPosts.php
   2. AdminchangesPosts.php
@@ -32,7 +32,7 @@ Index.php
   2. ListPostView.php
   3. PostView.php
   4. template.php 
-4. Controller:
+* Controller:
   1. backend.php
   2. frontend.php
    
