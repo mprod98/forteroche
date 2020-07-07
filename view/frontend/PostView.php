@@ -6,7 +6,7 @@
 
     <p class="bouton_retour">
         <a href="index.php">
-            <button class="btn btn-default">Chapitre: Retour à la liste </button>
+            <span class="btn btn-default">Chapitre: Retour à la liste </span>
         </a>
     </p>
     
@@ -75,7 +75,7 @@
 
                     <br/>
                     <a href="index.php?action=report&amp;comment_id=<?= $comment['id'] ?>&amp;post_id=<?= $comment['post_id'] ?>" onclick="return(confirm('Etes-vous sûr de vouloir signaler ce commentaire ?'));">
-                        <button class="reporting btn-xs btn-danger" >Signaler</button>
+                        <span class="reporting btn-xs btn-danger" >Signaler</span>
                     </a>
                     </p>
                  

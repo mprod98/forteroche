@@ -57,8 +57,8 @@
 					}
 					else { ?>
 						<ul class="nav navbar-right navbar-nav">
-							<li><a href="index.php"><button class="btn btn-xs btn-info">Accéder au Blog</button></a></li>
-							<li><a href="index.php?admin=logout"><button class="btn btn-xs btn-primary">Déconnexion</button></a></li>
+							<li><a href="index.php"><span class="btn btn-xs btn-info">Accéder au Blog</span></a></li>
+							<li><a href="index.php?admin=logout"><span class="btn btn-xs btn-primary">Déconnexion</span></a></li>
      					</ul>
 					<?php
 					}

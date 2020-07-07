@@ -31,8 +31,8 @@
 		<h2 class="panel-title">Gestion du Roman</h2>
 	</div>
 	<div class="panel-body">
-		<a href="index.php?action=AdminNewPost"><button class="btn btn-primary">Nouveau Chapitre</button></a>
-		<a href="index.php?action=AdminAllPosts"><button class="btn btn-primary">Voir tous les Chapitres</button></a>
+		<a href="index.php?action=AdminNewPost"><span class="btn btn-primary">Nouveau Chapitre</span></a>
+		<a href="index.php?action=AdminAllPosts"><span class="btn btn-primary">Voir tous les Chapitres</span></a>
 	</div>
 </div>
 

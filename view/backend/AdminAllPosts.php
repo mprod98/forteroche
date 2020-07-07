@@ -4,7 +4,7 @@
 
 <p class="bouton_retour">
   <a href="index.php?action=admin">
-    <button class="btn btn-primary">Retour à l'accueil</button>
+    <span class="btn btn-primary">Retour à l'accueil</span>
   </a>
 </p>
 
@@ -31,14 +31,14 @@ while ($data = $posts->fetch())
 		</div>
 		<div class="panel-footer">
 			<a href="index.php?action=AdminChangePosts&amp;id=<?= $data['id'] ?>" data-toggle="tooltip" title="Modifier">
-				<button class="btn btn-warning btn-lg">
+				<span class="btn btn-warning btn-lg">
           <span class="glyphicon glyphicon-pencil"></span>
-        </button>
+        </span>
 			</a> 
 			<a href="index.php?action=adminDeletePost&amp;id=<?= $data['id'] ?>" data-toggle="tooltip" title="Supprimer" onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce chapitre ?'));">
-        <button class="btn btn-danger btn-lg">
+        <span class="btn btn-danger btn-lg">
           <span class="glyphicon glyphicon-remove"></span>
-        </button>
+        </span>
       </a>
 		</div>
   </div>

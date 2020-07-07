@@ -4,7 +4,7 @@
 
 <p class="bouton_retour">
     <a href="index.php?action=admin">
-        <button class="btn btn-default">Retour à l'accueil</button>
+        <span class="btn btn-default">Retour à l'accueil</span>
     </a>
 </p>
 

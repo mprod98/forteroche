@@ -55,8 +55,8 @@
 					?>
 						
 						<ul class="nav navbar-right navbar-nav">
-							<li><a href="index.php?action=admin"><button class="btn btn-xs btn-primary">Section Administration</button></a></li>
-							<li><a href="index.php?admin=logout"><button class="btn btn-xs btn-danger">Déconnexion</button></a></li>
+							<li><a href="index.php?action=admin"><span class="btn btn-xs btn-primary">Section Administration</span></a></li>
+							<li><a href="index.php?admin=logout"><span class="btn btn-xs btn-danger">Déconnexion</span></a></li>
      					</ul>
 
      				<?php
