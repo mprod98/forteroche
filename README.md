@@ -15,12 +15,12 @@ Les fichiers se décomposent en Modeles Vues Controleur avec un Routeur pour dir
 1. Routeur:
 Index.php
 2. Model:
-⋅⋅1. AdminManager.php
-⋅⋅2. CommentManager.php
-⋅⋅3. Manager.php  *contient la function protégée dbConnect*
-⋅⋅4. PostManager.php
+  1. AdminManager.php
+  2. CommentManager.php
+  3. Manager.php  *contient la function protégée dbConnect*
+  4. PostManager.php
 3. View (contient deux dossiers, le premier pour le Frontend, le second pour le Backend):
-⋅⋅* Backend:
+  * Backend:
   1. AdminAllPosts.php
   2. AdminchangesPosts.php
   3. AdminIndex.php
