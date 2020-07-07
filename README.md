@@ -35,4 +35,5 @@ Index.php
 4. Controller:
   1. backend.php
   2. frontend.php
+   
    **Attention toutefois. Le dépot contient aussi un fichier 'vendor/bootsrap' qui n'est là qu'à titre de comprehension pour mon projet. Il vous suffit de placer les liens CDN Bootstrap dans le projet afin de supprimer ce dossier si vous ne souhaitez pas l'héberger sur votre serveur de projet**
