@@ -1,0 +1,9 @@
+<?php
+$CONFIG=[
+    'host'=>'',
+    'dbname'=>'',
+    'user'=>'',
+    'password'=>''
+];
+
+?>
