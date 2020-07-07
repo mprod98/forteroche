@@ -1,6 +1,6 @@
 # forteroche
-Projet de blog destinée à une écrivain du nom de Jean Forteroche.
-Celui-ci répond aux exigences demandées pour le projet 4 de la formation Web devellopeur Junior.
+Projet de blog destiné à une écrivain du nom de Jean Forteroche.
+Celui-ci répond aux exigences demandées pour le projet 4 de la formation Web devellopeur Junior chez OpenClassroom.
 L'auteur doit pouvoir éditer son livre par chapitre, et faire partager cela à ses lecteurs.
 Il doit pouvoir se connecter à une interface Backend via un login, afin de gérer l'acriture, les modifications, et l'administration du blog.
 Les lecteurs doivent pouvoir laisser des commentaires en dessous de chaque chapitre, et peuevnt aussi signaler les commenatires "deviants" à l'admin du site via un bouton signaler.
@@ -35,4 +35,4 @@ Index.php
 4. Controller:
   1. backend.php
   2. frontend.php
-**Attention toutefois. Le dépot contient aussi un fichier 'vendor/bootsrap' qui n'est là qu'à titre de comprehension pour mon projet. Il vous suffit de placer les liens CDN Bootstrap dans le projet afin de supprimer ce dossier si vous ne souhaitez pas l'héberger sur votre serveur de projet**
+   **Attention toutefois. Le dépot contient aussi un fichier 'vendor/bootsrap' qui n'est là qu'à titre de comprehension pour mon projet. Il vous suffit de placer les liens CDN Bootstrap dans le projet afin de supprimer ce dossier si vous ne souhaitez pas l'héberger sur votre serveur de projet**
