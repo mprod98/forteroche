@@ -5,7 +5,8 @@ require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/AdminManager.php');
 
-function listPosts()
+class Frontend {
+public function listPosts()
 {
     $postManager = new PostManager(); // Création objet
     $posts = $postManager->getPosts(); // call fonction de l'objet 
@@ -13,7 +14,7 @@ function listPosts()
     require('view/frontend/ListPostsView.php');
 }
 
-function post($postId)
+public function post($postId)
 {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
@@ -25,7 +26,7 @@ function post($postId)
     require('view/frontend/PostView.php');
 }
 
-function addComment($postId, $author, $comment)
+public function addComment($postId, $author, $comment)
 {
     $commentManager = new CommentManager();
     $affectedLines = $commentManager->postComment($postId, $author, $comment);
@@ -38,7 +39,7 @@ function addComment($postId, $author, $comment)
     }
 }
 
-function report($commentId, $postId)
+public function report($commentId, $postId)
 {
     $commentManager = new CommentManager();
     $affectedLines = $commentManager->postReporting($commentId);
@@ -51,12 +52,12 @@ function report($commentId, $postId)
     }
 }
 
-function error($e)
+public function error($e)
 {
     require('view/frontend/ErrorView.php');
 }
 
-function checkPost($postId)
+public function checkPost($postId)
 {
     $postId = intval($postId);
     $postManager = new PostManager();
@@ -65,7 +66,7 @@ function checkPost($postId)
     return $check;
 }
 
-function checkComment($commentId) //verifie les commentaires
+public function checkComment($commentId) //verifie les commentaires
 {
     $commentId = intval($commentId);
     $commentManager = new CommentManager();
@@ -74,11 +75,12 @@ function checkComment($commentId) //verifie les commentaires
     return $check;
 }
 
-function checkReport($reportId)// verifie les signalements
+public function checkReport($reportId)// verifie les signalements
 {
     $reportId = intval($reportId);
     $commentManager = new CommentManager();
     $check = $commentManager->getCheckReport($reportId);
 
     return $check;
+}
 }

@@ -1,12 +1,11 @@
 <?php
-
-// Chargement des classes
 require_once('model/AdminManager.php');
 require_once('model/CommentManager.php');
 require_once('model/PostManager.php');
+// Chargement des classes
+class Backend {
 
-
-function login()
+public function login()
 {
     if(isset($_POST['login']) && isset($_POST['pass']) && $_POST['login'] != '' && $_POST['pass'] != '') {
         $login = htmlspecialchars($_POST['login']);
@@ -42,13 +41,13 @@ function login()
     }
 }
 
-function logout()
+public function logout()
 {
     $_SESSION = array();
     session_destroy();
 }
 
-function adminIndex()
+public function adminIndex()
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter 07";
@@ -62,7 +61,7 @@ function adminIndex()
     require('view/backend/AdminIndex.php');
 }
 
-function adminDeleteReport($commentId)
+public function adminDeleteReport($commentId)
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -81,7 +80,7 @@ function adminDeleteReport($commentId)
     }
 }
 
-function adminCancelReport($reportId)
+public function adminCancelReport($reportId)
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -100,12 +99,12 @@ function adminCancelReport($reportId)
     }
 }
 
-function adminNewPost() 
+public function adminNewPost() 
 {
     require('view/backend/AdminNewPost.php');
 }
 
-function adminAddPost() 
+public function adminAddPost() 
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -125,7 +124,7 @@ function adminAddPost()
     }
 }
 
-function adminAllPosts() 
+public function adminAllPosts() 
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -139,7 +138,7 @@ function adminAllPosts()
     require('view/backend/AdminAllPosts.php');
 }
 
-function adminChangePost($postId) 
+public function adminChangePost($postId) 
 {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
@@ -151,7 +150,7 @@ function adminChangePost($postId)
     require('view/backend/AdminChangePosts.php');
 }
 
-function adminChangingPost($postId) 
+public function adminChangingPost($postId) 
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -170,7 +169,7 @@ function adminChangingPost($postId)
     }    
 }
 
-function adminDeletePost($postId)
+public function adminDeletePost($postId)
 {
     if (!isset($_SESSION['login'])){
         $message="veuillez vous connecter";
@@ -187,4 +186,5 @@ function adminDeletePost($postId)
     else {
        header('Location: index.php?action=AdminAllPosts');
     }    
+}
 }

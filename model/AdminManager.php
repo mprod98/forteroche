@@ -78,13 +78,6 @@ class AdminManager extends Manager
         else {
             $comments = $db->prepare('SELECT * FROM comments WHERE post_id = ?');
             $comments->execute(array($postId));
-
-            while ($comment = $comments->fetch())
-            {
-                $deleteComments= $this->setDeleteReport($comment['id']);
-            }
-            
-            return $deleteComments;
         }
     }
 }

@@ -3,27 +3,28 @@ session_start();
 
 require_once('controller/frontend.php');
 require_once('controller/backend.php');
-
+$frontend= new Frontend();
+$backend= new Backend();
 try {
     if (isset($_POST['login'])) {
-        login();
+        $backend->login();
     }
     elseif (isset($_GET['admin']) && $_GET['admin'] == 'logout') {
-        logout();
+        $backend->logout();
     }
 
     if (isset($_GET['action'])) {
 
         if ($_GET['action'] == 'listPosts') {
-            listPosts();
+            $frontend->listPosts();
         }
         elseif ($_GET['action'] == 'post') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $exist = checkPost($_GET['id']);
+                $exist = $frontend->checkPost($_GET['id']);
 
                 if($exist['post_exist']){
-                    post($_GET['id']);
+                    $frontend->post($_GET['id']);
                 }
                 else {
                     throw new Exception(' Sorry Le chapitre que vous cherchez n\'existe pas !');
@@ -38,10 +39,10 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
 
                 if (!empty($_POST['author']) && !empty($_POST['comment']) && trim($_POST['author']) != '' && trim($_POST['comment']) != '') {
-                    $exist = checkPost($_GET['id']);
+                    $exist =  $frontend->checkPost($_GET['id']);
 
                     if ($exist['post_exist']) {
-                        addComment($_GET['id'], htmlspecialchars($_POST['author']), htmlspecialchars($_POST['comment']));
+                        $frontend->addComment($_GET['id'], htmlspecialchars($_POST['author']), htmlspecialchars($_POST['comment']));
                     }
                     else {
                         throw new Exception('Oups ! Le chapitre que vous cherchez n\'existe pas (ou plus). Impossible d\'ajouter votre commentaire !');
@@ -58,13 +59,13 @@ try {
         elseif ($_GET['action'] == 'report') {
 
             if ((isset($_GET['post_id']) && $_GET['post_id'] > 0) && (isset($_GET['comment_id']) && $_GET['comment_id'] > 0)) {
-                $postExist = checkPost($_GET['post_id']);
+                $postExist = $frontend->checkPost($_GET['post_id']);
 
                 if ($postExist['post_exist']) {
-                    $commentExist = checkComment($_GET['comment_id']);
+                    $commentExist = $frontend->checkComment($_GET['comment_id']);
 
                     if ($commentExist['comment_exist']) {
-                        report($_GET['comment_id'], $_GET['post_id']);
+                        $frontend->report($_GET['comment_id'], $_GET['post_id']);
                     }
                     else{
                         throw new Exception('Sorry! Le commentaire que vous souhaitez signaler n\'existe pas . Impossible de signaler le commentaire');
@@ -80,15 +81,15 @@ try {
             }
         }
         elseif ($_GET['action'] == 'admin') {
-            adminIndex();
+            $backend->adminIndex();
         }
         elseif ($_GET['action'] == 'adminDeleteReport') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $commentExist = checkComment($_GET['id']);
+                $commentExist = $frontend->checkComment($_GET['id']);
 
                 if ($commentExist['comment_exist']) {
-                    adminDeleteReport($_GET['id']);
+                    $backend->adminDeleteReport($_GET['id']);
                 }
                 else{
                     throw new Exception('Sorry! Le commentaire que vous souhaitez supprimer n\'existe pas (ou plus). Impossible de le supprimer !');
@@ -102,10 +103,10 @@ try {
         elseif ($_GET['action'] == 'adminCancelReport') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $exist = checkReport($_GET['id']);
+                $exist = $frontend->checkReport($_GET['id']);
 
                 if ($exist['report_exist']) {
-                    adminCancelReport($_GET['id']);
+                    $backend->adminCancelReport($_GET['id']);
                 }
                 else{
                     throw new Exception('Sorry! Le signalement que vous souhaitez annuler est inexistant.');
@@ -116,21 +117,21 @@ try {
             }
         }
         elseif ($_GET['action'] == 'AdminNewPost') {
-            adminNewPost();
+            $backend->adminNewPost();
         }
         elseif ($_GET['action'] == 'adminAddPost') {
-            adminAddPost();
+            $backend->adminAddPost();
         }
         elseif ($_GET['action'] == 'AdminAllPosts') {
-            adminAllPosts();
+            $backend->adminAllPosts();
         }
         elseif ($_GET['action'] == 'AdminChangePosts') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $exist = checkPost($_GET['id']);
+                $exist = $frontend->checkPost($_GET['id']);
 
                 if ($exist['post_exist']) {
-                    adminChangePost($_GET['id']);
+                    $backend->adminChangePost($_GET['id']);
                 }
                 else{
                     throw new Exception('Sorry! Le chapitre que vous cherchez n\'existe pas .');
@@ -144,10 +145,10 @@ try {
         elseif ($_GET['action'] == 'adminChangingPost') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $exist = checkPost($_GET['id']);
+                $exist = $frontend->checkPost($_GET['id']);
 
                 if ($exist['post_exist']) {
-                    adminChangingPost($_GET['id']);
+                    $backend->adminChangingPost($_GET['id']);
                 }
                 else{
                     throw new Exception('Sorry ! Impossible de mettre à jour le chapitre car il n\'existe pas (ou plus).');
@@ -161,10 +162,10 @@ try {
         elseif ($_GET['action'] == 'adminDeletePost') {
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $exist = checkPost($_GET['id']);
+                $exist = $frontend->checkPost($_GET['id']);
 
                 if ($exist['post_exist']) {
-                    adminDeletePost($_GET['id']);
+                    $backend->adminDeletePost($_GET['id']);
                 }
                 else{
                     throw new Exception('Sorry! Le chapitre que vous cherchez n\'existe pas. Impossible de le supprimer !');
@@ -180,7 +181,8 @@ try {
  
     }
     else {
-        listPosts();
+        
+        $frontend->listPosts();
     }
 }
 catch(Exception $e) {
